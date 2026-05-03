@@ -1,0 +1,546 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rogério • O Futuro da Tecnologia</title>
+
+    <style>
+
+        /* RESET */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        body {
+            background: #000814;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* LINKS */
+
+        a {
+            color: cyan;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            a:hover {
+                text-shadow: 0 0 10px cyan;
+            }
+
+        /* LOGIN */
+
+        #loginTela {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #000814;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .login-box {
+            background: #001d3d;
+            padding: 40px;
+            border-radius: 20px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 25px cyan;
+        }
+
+            .login-box h2 {
+                color: cyan;
+                margin-bottom: 20px;
+            }
+
+            .login-box input {
+                width: 90%;
+                padding: 12px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 10px;
+            }
+
+            .login-box button {
+                width: 95%;
+                padding: 12px;
+                margin-top: 10px;
+                border: none;
+                border-radius: 10px;
+                background: cyan;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+        .google {
+            background: white !important;
+            color: black;
+        }
+
+        #mensagem {
+            margin-top: 15px;
+            color: cyan;
+        }
+
+        /* MENU */
+
+        nav {
+            background: #001d3d;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px cyan;
+        }
+
+            nav a {
+                margin: 15px;
+                font-size: 18px;
+            }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+            .hero h1 {
+                font-size: 70px;
+                color: cyan;
+                text-shadow: 0 0 20px cyan;
+            }
+
+            .hero p {
+                margin-top: 20px;
+                font-size: 22px;
+            }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 50px;
+        }
+
+        h2 {
+            color: cyan;
+            margin-bottom: 20px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #001d3d;
+            width: 300px;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,255,255,0.3);
+            transition: 0.4s;
+        }
+
+            .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 0 25px cyan;
+            }
+
+            .card h3 {
+                color: cyan;
+                margin-bottom: 10px;
+            }
+
+            .card p {
+                line-height: 1.7;
+            }
+
+        /* SOBRE */
+
+        .sobre {
+            background: #001d3d;
+            border-radius: 25px;
+            box-shadow: 0 0 25px cyan;
+        }
+
+            .sobre p {
+                text-align: justify;
+                line-height: 2;
+                font-size: 18px;
+            }
+
+        /* FOOTER */
+
+        footer {
+            background: #001d3d;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: 0 0 20px cyan;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <div id="loginTela">
+
+        <div class="login-box">
+
+            <h2>🔐 Entrar no Site</h2>
+
+            <input type="email" id="email" placeholder="Digite seu email">
+
+            <input type="password" id="senha" placeholder="Digite sua senha">
+
+            <button onclick="criarConta()">
+                Criar Conta
+            </button>
+
+            <button onclick="login()">
+                Fazer Login
+            </button>
+
+            <button class="google" onclick="loginGoogle()">
+                Entrar com Google
+            </button>
+
+            <p id="mensagem"></p>
+
+        </div>
+
+    </div>
+
+    <!-- MENU -->
+
+    <nav>
+
+        <a href="#sobre">Sobre</a>
+
+        <a href="#skills">Habilidades</a>
+
+        <a href="#objetivos">Objetivos</a>
+
+        <a href="#projetos">Projetos</a>
+
+        <a href="#contato">Contato</a>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <h1>🔥 ROGÉRIO 🔥</h1>
+
+        <p>
+            Futuro Desenvolvedor Web • Estudante de TI • Apaixonado por tecnologia
+        </p>
+
+    </div>
+
+    <!-- SOBRE -->
+
+    <section class="sobre" id="sobre">
+
+        <h2>🚀 Sobre Mim</h2>
+
+        <p>
+
+            Olá, meu nome é Rogério e sou apaixonado por tecnologia e programação. Atualmente estou estudando HTML, CSS e JavaScript enquanto desenvolvo meus próprios projetos para ganhar experiência prática. Meu objetivo é crescer cada vez mais no mundo da tecnologia e me tornar um desenvolvedor web profissional.
+
+        </p>
+
+    </section>
+
+    <!-- HABILIDADES -->
+
+    <section id="skills">
+
+        <h2>💻 Habilidades</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>HTML5</h3>
+
+                <p>
+                    Estruturação moderna de sites profissionais.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>CSS3</h3>
+
+                <p>
+                    Criação de designs modernos e estilos avançados.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Interatividade e funcionalidades dinâmicas.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>TI</h3>
+
+                <p>
+                    Conhecimento em informática e tecnologia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OBJETIVOS -->
+
+    <section id="objetivos">
+
+        <h2>🎯 Objetivos</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🌐 Criar Sites</h3>
+
+                <p>
+                    Desenvolver sites modernos e impressionantes.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🚀 Evoluir</h3>
+
+                <p>
+                    Aprender novas tecnologias constantemente.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>💼 Trabalhar com TI</h3>
+
+                <p>
+                    Construir uma carreira profissional na tecnologia.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJETOS -->
+
+    <section id="projetos">
+
+        <h2>🔥 Projetos</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>🌐 Site Pessoal</h3>
+
+                <p>
+                    Meu primeiro projeto profissional em HTML.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🔐 Sistema Login</h3>
+
+                <p>
+                    Sistema moderno de autenticação.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🎨 Portfólio</h3>
+
+                <p>
+                    Projeto para mostrar minhas habilidades.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATO -->
+
+    <section id="contato">
+
+        <h2>📞 Contato</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Email</h3>
+
+                <p>
+
+                    <a href="mailto:piuutrapp@gmail.com">
+
+                        📧 Enviar Email
+
+                    </a>
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Instagram</h3>
+
+                <p>
+
+                    <a href="https://instagram.com/_rogerio.to" target="_blank">
+
+                        📸 Abrir Instagram
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            🔥 Site criado em homenagem ao futuro desenvolvedor Rogério 🔥
+        </p>
+
+    </footer>
+
+    <script>
+
+/* SALVAR CONTA */
+
+let emailSalvo = localStorage.getItem("email");
+
+let senhaSalva = localStorage.getItem("senha");
+
+/* CRIAR CONTA */
+
+function criarConta(){
+
+    let email =
+    document.getElementById("email").value;
+
+    let senha =
+    document.getElementById("senha").value;
+
+    localStorage.setItem("email", email);
+
+    localStorage.setItem("senha", senha);
+
+    document.getElementById("mensagem").innerHTML =
+    "Conta criada com sucesso 😎";
+
+}
+
+/* LOGIN */
+
+function login(){
+
+    let email =
+    document.getElementById("email").value;
+
+    let senha =
+    document.getElementById("senha").value;
+
+    if(
+        email == localStorage.getItem("email")
+        &&
+        senha == localStorage.getItem("senha")
+    ){
+
+        document.getElementById("loginTela").style.display =
+        "none";
+
+    }
+
+    else{
+
+        document.getElementById("mensagem").innerHTML =
+        "Email ou senha incorretos";
+
+    }
+
+}
+
+/* LOGIN GOOGLE */
+
+function loginGoogle(){
+
+    let emailGoogle = prompt(
+        "Digite seu email Google"
+    );
+
+    if(emailGoogle != ""){
+
+        document.getElementById("loginTela").style.display =
+        "none";
+
+        alert(
+            "Login realizado com: " + emailGoogle
+        );
+
+    }
+
+}
+
+    </script>
+
+</body>
+
+</html>
